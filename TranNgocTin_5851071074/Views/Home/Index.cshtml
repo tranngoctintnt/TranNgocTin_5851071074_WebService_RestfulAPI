@@ -1,0 +1,36 @@
+﻿@model IEnumerable<TranNgocTin_5851071074.Models.Employee> 
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Sr No</th>
+            <th>Employee Name</th>
+            <th>City</th>
+            <th>State</th>
+            <th>Country</th>
+            <th>Department</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in Model)
+            {
+                <tr>
+                    <td>@item.sr_no</td>
+                    <td>@item.emp_name</td>
+                    <td>@item.city</td>
+                    <td>@item.state</td>
+                    <td>@item.country</td>
+                    <td>@item.department</td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.sr_no">Edit</a>
+                        <a asp-action="Delete" asp-route-id="@item.sr_no">Delete</a>
+                    </td>
+
+                </tr>
+            }
+    </tbody>
+</table>

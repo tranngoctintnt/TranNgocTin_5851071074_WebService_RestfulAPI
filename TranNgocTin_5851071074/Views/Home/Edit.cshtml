@@ -1,0 +1,39 @@
+﻿@model TranNgocTin_5851071074.Models.Employee
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<form asp-action="Edit" class="form-horizonal">
+    <div class="form-group">
+        <label class="control-label">Name</label>
+        <input asp-for="emp_name" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label class="control-label">City</label>
+        <input asp-for="city" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label class="control-label">State</label>
+        <input asp-for="state" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label class="control-label">Country</label>
+        <input asp-for="country" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label class="control-label">Department</label>
+        <input asp-for="department" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <input type="submit" value="submit" class="btn btn-primary"/>
+    </div>
+</form>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
